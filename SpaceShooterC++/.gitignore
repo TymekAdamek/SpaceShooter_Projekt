@@ -8,3 +8,5 @@ Release/
 *.exe
 *.log
 *.tlog
+!External/SFML/bin/
+!*.dll
