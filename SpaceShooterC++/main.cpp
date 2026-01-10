@@ -1,4 +1,11 @@
 #include <SFML/Graphics.hpp>
+<<<<<<< HEAD
+=======
+#include <vector>
+#include <iostream>
+
+enum GameState { MENU, GAME };
+>>>>>>> 84dc2a7 (...)
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Space Shooter - TEST");
