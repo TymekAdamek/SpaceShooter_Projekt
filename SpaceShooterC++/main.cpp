@@ -2,7 +2,6 @@
 #include <vector>
 #include <iostream>
 
-// Prosty stan gry, żeby wykładowca widział architekturę
 enum GameState { MENU, GAME };
 
 int main() {
