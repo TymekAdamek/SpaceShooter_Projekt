@@ -142,12 +142,6 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\..\..\..\Downloads\background.jpg" />
-    <Image Include="..\..\..\..\Downloads\bullet.png" />
-    <Image Include="..\..\..\..\Downloads\enemy.png" />
-    <Image Include="..\..\..\..\Downloads\player.png" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
