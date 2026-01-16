@@ -10,7 +10,7 @@ Bullet::Bullet(sf::Texture& tex, float startX, float startY) {
 }
 
 void Bullet::update() {
-    sprite.move(0.0f, -speed); 
+    sprite.move(0.0f, -speed);
 }
 
 void Bullet::draw(sf::RenderWindow& window) {
