@@ -1,27 +1,12 @@
-#include <SFML/Graphics.hpp>
-<<<<<<< HEAD
-=======
-#include <vector>
-#include <iostream>
-
-enum GameState { MENU, GAME };
->>>>>>> 84dc2a7 (...)
+#include "Game.h"
+#include <ctime>
+#include <cstdlib>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Space Shooter - TEST");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    std::srand(static_cast<unsigned>(time(NULL)));
 
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+    Game game;
+    game.run();
 
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
     return 0;
 }
