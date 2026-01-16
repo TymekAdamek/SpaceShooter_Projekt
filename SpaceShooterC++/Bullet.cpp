@@ -2,6 +2,8 @@
 
 Bullet::Bullet(sf::Texture& tex, float startX, float startY) {
     sprite.setTexture(tex);
+
+    sprite.setScale(0.05f, 0.05f);//naprawa rozmiaru kuli do 5%
     speed = 10.0f;
 
     sf::FloatRect bounds = sprite.getLocalBounds();
