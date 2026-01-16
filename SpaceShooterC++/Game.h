@@ -42,6 +42,7 @@ private:
     void initPlayer();
     void initEnemies();
     void initMenu();
+    void saveScore();
 
 public:
     Game();

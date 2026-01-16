@@ -161,6 +161,9 @@ void Game::updateGame() {
 
                 this->points += 10;
 
+                if (this->spawnTimerMax > 15.f)//przyspieszenie gry
+                    this->spawnTimerMax -= 0.5f;
+
                 // Usuwamy kulê i wroga
                 this->bullets.erase(this->bullets.begin() + k);
                 delete this->enemies[i];
@@ -213,4 +216,22 @@ void Game::render() {
     }
 
     this->window->display();
+}
+
+void Game::saveScore() {
+    // Otwieramy plik
+    std::ofstream file("wyniki.txt", std::ios::app);
+
+    if (file.is_open()) {
+        std::string s = "PIRAT - WYNIK: " + std::to_string(this->points);
+
+        // Proste szyfrowanie
+        // Przesuwamy ka¿dy znak o +1
+        for (size_t i = 0; i < s.length(); i++) {
+            s[i] += 1;
+        }
+
+        file << s << std::endl;
+        file.close();
+    }
 }
