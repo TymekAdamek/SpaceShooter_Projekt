@@ -45,4 +45,7 @@
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="..\..\..\..\Downloads\the-rum-is-gone-font (1)\font.ttf" />
+  </ItemGroup>
 </Project>
