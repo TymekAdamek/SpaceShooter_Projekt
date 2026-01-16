@@ -8,20 +8,16 @@
 
 class Menu {
 public:
-    // Konstruktor przyjmujący wymiary okna do centrowania napisów
     Menu(float width, float height);
-    
-    // Metoda rysująca napisy w oknie
-    void draw(sf::RenderWindow &window);
+    void draw(sf::RenderWindow& window);
 
 private:
     sf::Font font;
-	sf::Text titleText; //dodajemy tytuł gry
+    sf::Text titleText;//tytul
     sf::Text playText;
     sf::Text exitText;
 };
 
-// Funkcja zapisująca zaszyfrowany wynik
 void zapiszWynik(int punkty);
 
 #endif

@@ -11,13 +11,24 @@ void Game::initTextures() {
         std::cout << "BLAD: Nie znaleziono assets/background.jpg" << std::endl;
     }
 
+    //NAPRAWA ROZJECHANEGO T£A
+    // pobieramy rozmiar obrazka z pliku
+    sf::Vector2u textureSize = this->bgTexture.getSize();
+
+    float scaleX = 800.0f / textureSize.x;
+    float scaleY = 600.0f / textureSize.y;
+
     this->bgSprite1.setTexture(this->bgTexture);
     this->bgSprite2.setTexture(this->bgTexture);
+
+    // tlo wypelnia ekran
+    this->bgSprite1.setScale(scaleX, scaleY);
+    this->bgSprite2.setScale(scaleX, scaleY);
 
     // Ustawienie drugiego t³a nad pierwszym
     this->bgSprite2.setPosition(0, -600.f);
 
-    this->bgSpeed = 2.0f; // Prêdkoœæ tla
+    this->bgSpeed = 2.0f; // Prêdkoœæ nurtu
 }
 
 void Game::initPlayer() {
@@ -97,7 +108,7 @@ void Game::updateMenu() {
 }
 
 void Game::updateGame() {
-    // 1. RUCH WODY (Infinite Scrolling)
+    // 1. RUCH WODY
     this->bgSprite1.move(0, this->bgSpeed);
     this->bgSprite2.move(0, this->bgSpeed);
 
@@ -107,7 +118,7 @@ void Game::updateGame() {
     // 2. GRACZ
     this->player->update();
 
-    // --- STRZELANIE (INTEGRACJA KODU WIKTORA) ---
+    // INTEGRACJA KODU WIKTORA
     if (this->attackCooldown < this->attackCooldownMax)
         this->attackCooldown += 1.f;
 
