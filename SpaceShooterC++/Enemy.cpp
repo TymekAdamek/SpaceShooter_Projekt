@@ -11,6 +11,8 @@ Enemy::Enemy() {
     }
     sprite.setTexture(texture);
 
+    sprite.setScale(0.1f, 0.1f);//rowniez skalujemy jak w player.cpp
+
 
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);

@@ -6,6 +6,19 @@ Menu::Menu(float width, float height) {
         // W przypadku błędu SFML wypisze komunikat w konsoli
     }
 
+    // TYTUŁ: PIRATE SHOOTER
+    titleText.setFont(font);
+    titleText.setString("PIRATE SHOOTER");
+    titleText.setCharacterSize(60);
+    titleText.setFillColor(sf::Color::Yellow);
+    titleText.setStyle(sf::Text::Bold);
+
+    // Centrowanie tytułu
+    sf::FloatRect titleBounds = titleText.getLocalBounds();
+    titleText.setOrigin(titleBounds.left + titleBounds.width / 2.0f,
+        titleBounds.top + titleBounds.height / 2.0f);
+    titleText.setPosition(sf::Vector2f(width / 2.0f, height / 2.0f - 150));
+
     // Konfiguracja napisu PLAY
     playText.setFont(font);
     playText.setString("PLAY - Wcisnij Enter");

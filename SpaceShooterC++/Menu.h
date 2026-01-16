@@ -16,6 +16,7 @@ public:
 
 private:
     sf::Font font;
+	sf::Text titleText; //dodajemy tytuł gry
     sf::Text playText;
     sf::Text exitText;
 };

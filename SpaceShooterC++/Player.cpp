@@ -11,7 +11,8 @@ Player::Player() {
     }
     sprite.setTexture(texture);
 
-    
+    sprite.setScale(0.1f, 0.1f);//skalowanie bo statek jest za du¿y
+
     sf::FloatRect bounds = sprite.getLocalBounds();
     sprite.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
     sprite.setPosition(400.0f, 550.0f);
