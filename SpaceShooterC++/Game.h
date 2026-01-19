@@ -1,9 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <vector>
 #include <iostream>
 
-//dodaje pliki Wiktora i Milosza
 #include "Player.h"
 #include "Enemy.h"
 #include "Menu.h"
@@ -13,19 +13,25 @@ class Game {
 private:
     sf::RenderWindow* window;
 
-    // T£O (Ruszaj¹ce siê morze)
+    // T£O
     sf::Texture bgTexture;
     sf::Sprite bgSprite1;
     sf::Sprite bgSprite2;
     float bgSpeed;
 
-    //OBIEKTy
+    // GUI i AUDIO
+    sf::Font font;
+    sf::Text scoreText;
+    sf::Text gameOverText;
+    sf::Music bgMusic;
+
+    // OBIEKTY
     Player* player;
     std::vector<Enemy*> enemies;
-    std::vector<Bullet> bullets; // TU PRZECHOWUJEMY KULE
+    std::vector<Bullet> bullets;
     Menu* menu;
 
-    //LOGIKA
+    // LOGIKA
     float spawnTimer;
     float spawnTimerMax;
 
@@ -37,8 +43,10 @@ private:
     bool isGameOver;
     bool inMenu;
 
+    // Funkcje inicjalizuj¹ce
     void initWindow();
     void initTextures();
+    void initGUI();
     void initPlayer();
     void initEnemies();
     void initMenu();
@@ -54,5 +62,5 @@ public:
     void updatePollEvents();
     void updateGame();
     void updateMenu();
-    void endGame(); // Funkcja koñcz¹ca grê
+    void endGame();
 };
