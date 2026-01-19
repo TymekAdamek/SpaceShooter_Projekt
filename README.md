@@ -1,8 +1,6 @@
 🏴‍☠️ Pirate Shooter - Bitwa Morska
 Pirate Shooter to dynamiczna gra zręcznościowa 2D typu "Vertical Shooter" stworzona w języku C++ z wykorzystaniem biblioteki SFML. Wciel się w rolę kapitana statku pirackiego, niszcz wrogie okręty i przetrwaj jak najdłużej na otwartym morzu!
 
-(Tutaj po wrzuceniu na GitHuba możesz podmienić link na prawdziwy screenshot z gry)
-
 🚀 Funkcjonalności
 
  	🎮 Gameplay
@@ -12,7 +10,7 @@ Dynamiczny poziom trudności: Z każdym zestrzelonym wrogiem gra przyspiesza (sk
 
 System wyników: Zdobywaj punkty za każdego zniszczonego wroga.
 
- 	💻 Rozwiązania Techniczne (Code Highlights)
+ 	💻 Rozwiązania Techniczne
 Silnik Gry (Game Loop): Własna implementacja pętli gry z obsługą DeltaTime i zarządzaniem stanami (Menu / Gra / Game Over).
 
 Szyfrowanie Danych: Wyniki zapisywane są do pliku wyniki.txt z wykorzystaniem algorytmu szyfrującego (przesunięcie ASCII), aby zapobiec edycji wyników.
@@ -32,7 +30,7 @@ Biblioteka: SFML 2.6.1 (Graphics, Window, System)
 
 IDE: Visual Studio 2022
 
-Zasoby: Pliki graficzne .png/.jpg, czcionki .ttf
+Zasoby: Pliki graficzne .png/.jpg, czcionki .ttf, audio .ogg
 
 🕹️ Sterowanie
 Strzałki/ A,D - sterowanie na boki
